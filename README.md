@@ -1,3 +1,3 @@
 ### hulyang's blog
 
-_<http://hulyang.github.io>_
+_<https://hulyang.github.io>_

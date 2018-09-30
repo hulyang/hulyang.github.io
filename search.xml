@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HEXO指令回顾]]></title>
+    <url>%2F2018%2F09%2F30%2FHEXO%E6%8C%87%E4%BB%A4%E5%9B%9E%E9%A1%BE%2F</url>
+    <content type="text"><![CDATA[本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。HEXO官网地址: https://hexo.io/ 回顾截止到本章节为止，已经使用了很多hexo指令了分别有： init generate server clean new deploy 这些指令基本上是hexo中比较常用的指令，本章会逐一介绍这些指令。 init指令1hexo init [folder] 用于新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。 generate指令1hexo generate 也可简写为1hexo g 用于生成静态文件。静态文件存放在public文件夹下。 选项 描述 -d,–deploy 文件生成后立即部署网站 -w, –watch 监视文件变动 server指令1hexo server 也可简写为1hexo s 用于启动服务器。默认情况下，访问网址为：http://localhost:4000/。 选项 描述 -p, –port 重设端口 -s, –static 只使用静态文件 -l, –log 启动日记记录，使用覆盖记录格式 clean指令1hexo clean 该指令没有简写。用于清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。 new指令1hexo new [layout] &lt;title&gt; 用于新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。 deploy指令1hexo deploy 也可简写为1hexo d 用于部署网站。 参数 描述 -g, –generate 部署之前预先生成静态文件 其他hexo 还有很多其他的指令，例如: publish render migrate list . . . 这里就不一一列举了，有兴趣的话可以自行查看官方文档:https://hexo.io/zh-cn/docs/commands。]]></content>
+      <categories>
+        <category>HEXO</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HEXO写作、主题及部署]]></title>
     <url>%2F2018%2F09%2F28%2FHEXO%E5%86%99%E4%BD%9C%E3%80%81%E4%B8%BB%E9%A2%98%E5%8F%8A%E9%83%A8%E7%BD%B2%2F</url>
     <content type="text"><![CDATA[本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。HEXO官网地址: https://hexo.io/ HEXO写作可以通过执行new指令来创建博文。1hexo new [layout] &lt;title&gt; 创建博文尝试执行以下命令，访问博文地址观察下效果。1234hexo new 我的第一篇博客hexo cleanhexo generatehexo server 是可以明显看到刚刚所创建的那篇博文的。当然文章只有标题，没有实际内容，实际内容需要自己去编辑。编辑的话需要找到具体文件所在位置。执行new指令后是会打印出具体文件位置的，上面指令将会在_post文件夹下自动生成一个我的第一篇博客.md的markdown文件，如下： 编辑博文熟悉markdown语法的话编辑起来很简单，markdown语法就不做具体介绍，需要自己去学习。可以尝试在文件中随便写点什么，然后刷新页面。编辑的内容是会立马生效的。 另外hexo提供了很多标签插件，详情可见:https://hexo.io/zh-cn/docs/tag-plugins。标签插件有很多，并且官方文档中有详实的例子，这里就简单举个图片的例子，在文档中加入下面这段 1&#123;% img https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1538144411674&amp;di=f3bab7ad765c8131bf9d18e9190b02db&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201603%2F17%2F20160317124201_jUnuR.jpeg [赤木晴子] %&#125; 然后再刷新界面就能看到刚刚的那张图片了。 HEXO主题hexo可以自定义主题，当然也有丰富的开源主题供我们使用，可以在https://hexo.io/themes/去浏览并找到自己喜欢的主题。下载自己喜欢的主题，然后放到themes文件夹内，然后修改站点配置中的theme配置即可。例如下载好了next主题，然后再在站点配置中修改theme12#theme: landscapetheme: next 然后关闭HEXO服务，重新执行以下命令来启动HEXO服务。123hexo cleanhexo generatehexo server 刷新界面，便可看到主题效果： 具体主题中的很多配置可以自行参考自己喜欢的主题的文档或是教程去自定义配置，每个主题都不尽相同。 HEXO部署部署配置部署之前必须先配置好站点配置中deploy相关信息：123deploy: type: // 类型 repo: // 仓库地址 部署类型主要支持：Git、Heroku、Rsync、OpenShift、FTPSync，各类型的依赖需要自己安装。 部署指令部署指令很简单：1hexo deploy github访问部署到github的话，程序会尝试自动检测。想要通过https://&lt;用户名&gt;.github.io来访问自己的博客的话，需要在自己账号下新增一个名称为&lt;用户名&gt;.github.io的代码仓库，然后通过配置deploy将博客部署至该仓库下：12345deploy: type: git // git类型 repo: https://github.com/&lt;用户名&gt;/&lt;用户名&gt;.github.io.git // 注意最后有个.git不能少 branch: master // 必须在master分支下 message: [message] // 这个自定义就好，可以不配置 另外需要修改站点配置中的URL：1234567# URL## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;#url: http://yoursite.comurl: https://github.com/&lt;用户名&gt;/&lt;用户名&gt;.github.io // 将url修改为代码仓库地址、其他保持默认即可root: /permalink: :year/:month/:day/:title/permalink_defaults: 最后执行deploy指令1hexo deploy 便可通过https://&lt;用户名&gt;.github.io来访问自己的博客啦。]]></content>
@@ -25,7 +36,7 @@
   <entry>
     <title><![CDATA[HEXO搭建博客初体验]]></title>
     <url>%2F2018%2F09%2F14%2FHEXO%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%88%9D%E4%BD%93%E9%AA%8C%2F</url>
-    <content type="text"><![CDATA[本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。HEXO官网地址: https://hexo.io/ HEXO的安装环境准备安装HEXO前，必须确保安装机器上已经安装Git以及Node.js。如未安装，以下是对应的官网地址： Git: https://git-scm.com/ Node.js: https://nodejs.org/ 安装HEXO安装环境准备完毕后就可以直接通过npm来安装HEXO了： 1npm install -g hexo-cli 建站初始化建站目录HEXO安装完毕后，确定好建站目录，执行以下指令，自动初始化建站目录 123hexo init &lt;folder&gt;cd &lt;folder&gt;npm install 执行完毕后，建站目录会自定生成HEXO的目录结构，如下： 12345678.├── _config.yml // 站点配置文件├── package.json // 应用程序的信息├── scaffolds // 模板文件夹├── source // 资源文件夹| ├── _drafts // 草稿| └── _posts // 博文└── themes // 主题文件夹 在这通过注释的方式对各文件|文件夹进行了简单介绍，后续博文中会做进一步介绍。 自动生成静态文件建站目录初始化完成以后，再执行generate指令 1hexo generate 自动博客所需的静态文件（HTML、JS、CSS等） 启动服务静态文件生成以后，最后执行server指令 1hexo server 即可启动服务，通过http://127.0.0.1:4000/即可访问自己的博客，访问的效果图如下：]]></content>
+    <content type="text"><![CDATA[本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。HEXO官网地址: https://hexo.io/ HEXO的安装环境准备安装HEXO前，必须确保安装机器上已经安装Git以及Node.js。如未安装，以下是对应的官网地址： Git: https://git-scm.com/ Node.js: https://nodejs.org/ 安装HEXO安装环境准备完毕后就可以直接通过npm来安装HEXO了： 1npm install -g hexo-cli 建站初始化建站目录HEXO安装完毕后，确定好建站目录，执行以下指令，自动初始化建站目录 123hexo init &lt;folder&gt;cd &lt;folder&gt;npm install 执行完毕后，建站目录会自定生成HEXO的目录结构，如下： 12345678.├── _config.yml // 站点配置文件├── package.json // 应用程序的信息├── scaffolds // 模板文件夹├── source // 资源文件夹| ├── _drafts // 草稿| └── _posts // 博文└── themes // 主题文件夹 在这通过注释的方式对各文件|文件夹进行了简单介绍，后续博文中会做进一步介绍。 自动生成静态文件建站目录初始化完成以后，再执行generate指令 1hexo generate 自动生成博客所需的静态文件（HTML、JS、CSS等） 启动服务静态文件生成以后，最后执行server指令 1hexo server 即可启动服务，通过http://127.0.0.1:4000/即可访问自己的博客，访问的效果图如下：]]></content>
       <categories>
         <category>HEXO</category>
       </categories>
