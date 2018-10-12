@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -68,8 +75,6 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
-
 
 
 
@@ -81,13 +86,13 @@
 
 <meta name="description" content="我仍在向前的路上奔行尚未到达旅程的终点何谈疲惫">
 <meta property="og:type" content="website">
-<meta property="og:title" content="hulyang&#39;s blog">
+<meta property="og:title" content="hulyang">
 <meta property="og:url" content="https://github.com/hulyang/hulyang.github.io/index.html">
-<meta property="og:site_name" content="hulyang&#39;s blog">
+<meta property="og:site_name" content="hulyang">
 <meta property="og:description" content="我仍在向前的路上奔行尚未到达旅程的终点何谈疲惫">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hulyang&#39;s blog">
+<meta name="twitter:title" content="hulyang">
 <meta name="twitter:description" content="我仍在向前的路上奔行尚未到达旅程的终点何谈疲惫">
 
 
@@ -124,12 +129,22 @@
 
 
 
-  <title>hulyang's blog</title>
+  <title>hulyang</title>
   
 
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c5c6eedf512cfe227c5d7e99de5a835a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -155,12 +170,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">hulyang's blog</span>
+        <span class="site-title">hulyang</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">hulyang's blog</p>
       
   </div>
 
@@ -295,7 +310,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hulyang's blog">
+      <meta itemprop="name" content="hulyang">
     </span>
 
     
@@ -379,101 +394,27 @@
       
         
           
-            <blockquote>
-<p>本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。<br><strong>HEXO官网地址</strong>: <em><a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a></em></p>
-</blockquote>
-<h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>截止到本章节为止，已经使用了很多hexo指令了分别有：</p>
-<ul>
-<li><strong>init</strong></li>
-<li><strong>generate</strong></li>
-<li><strong>server</strong></li>
-<li><strong>clean</strong></li>
-<li><strong>new</strong></li>
-<li><strong>deploy</strong></li>
-</ul>
-<p>这些指令基本上是hexo中比较常用的指令，本章会逐一介绍这些指令。</p>
-<h3 id="init指令"><a href="#init指令" class="headerlink" title="init指令"></a>init指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
-<p>用于新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
-<h3 id="generate指令"><a href="#generate指令" class="headerlink" title="generate指令"></a>generate指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<p>也可简写为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
-<p>用于生成静态文件。静态文件存放在public文件夹下。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选项</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">-d,–deploy</td>
-<td style="text-align:left">文件生成后立即部署网站</td>
-</tr>
-<tr>
-<td style="text-align:left">-w, –watch</td>
-<td style="text-align:left">监视文件变动</td>
-</tr>
-</tbody>
-</table>
-<h3 id="server指令"><a href="#server指令" class="headerlink" title="server指令"></a>server指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>也可简写为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
-<p>用于启动服务器。默认情况下，访问网址为：<em><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></em>。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">选项</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">-p, –port</td>
-<td style="text-align:left">重设端口</td>
-</tr>
-<tr>
-<td style="text-align:left">-s, –static</td>
-<td style="text-align:left">只使用静态文件</td>
-</tr>
-<tr>
-<td style="text-align:left">-l, –log</td>
-<td style="text-align:left">启动日记记录，使用覆盖记录格式</td>
-</tr>
-</tbody>
-</table>
-<h3 id="clean指令"><a href="#clean指令" class="headerlink" title="clean指令"></a>clean指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-<p>该指令没有简写。<br>用于清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<h3 id="new指令"><a href="#new指令" class="headerlink" title="new指令"></a>new指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<p>用于新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<h3 id="deploy指令"><a href="#deploy指令" class="headerlink" title="deploy指令"></a>deploy指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>也可简写为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<p>用于部署网站。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">-g, –generate</td>
-<td style="text-align:left">部署之前预先生成静态文件</td>
-</tr>
-</tbody>
-</table>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>hexo 还有很多其他的指令，例如:</p>
-<ul>
-<li><strong>publish</strong></li>
-<li><strong>render</strong></li>
-<li><strong>migrate</strong></li>
-<li><strong>list</strong></li>
-<li>.</li>
-<li>.</li>
-<li>.</li>
-</ul>
-<p>这里就不一一列举了，有兴趣的话可以自行查看官方文档:<em><a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/commands</a></em>。</p>
-
           
+本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。HEXO官网地址: https://hexo.io/
+
+回顾截止到本章节为止，已经使用了很多hexo指令了分别有：
+
+init
+generate
+server
+clean
+new
+deploy
+
+这些指令
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/30/HEXO指令回顾/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -529,7 +470,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hulyang's blog">
+      <meta itemprop="name" content="hulyang">
     </span>
 
     
@@ -613,33 +554,19 @@
       
         
           
-            <blockquote>
-<p>本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。<br><strong>HEXO官网地址</strong>: <em><a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a></em></p>
-</blockquote>
-<h3 id="HEXO写作"><a href="#HEXO写作" class="headerlink" title="HEXO写作"></a>HEXO写作</h3><p>可以通过执行<strong>new</strong>指令来创建博文。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
-<h4 id="创建博文"><a href="#创建博文" class="headerlink" title="创建博文"></a>创建博文</h4><p>尝试执行以下命令，访问博文地址观察下效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new 我的第一篇博客</span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
-<img src="/2018/09/28/HEXO写作、主题及部署/firstblog.png">
-<p>是可以明显看到刚刚所创建的那篇博文的。当然文章只有标题，没有实际内容，实际内容需要自己去编辑。编辑的话需要找到具体文件所在位置。执行<strong>new</strong>指令后是会打印出具体文件位置的，上面指令将会在<strong>_post</strong>文件夹下自动生成一个<strong>我的第一篇博客.md</strong>的markdown文件，如下：</p>
-<img src="/2018/09/28/HEXO写作、主题及部署/firstblogdir.png">
-<h4 id="编辑博文"><a href="#编辑博文" class="headerlink" title="编辑博文"></a>编辑博文</h4><p>熟悉markdown语法的话编辑起来很简单，markdown语法就不做具体介绍，需要自己去学习。<br>可以尝试在文件中随便写点什么，然后刷新页面。编辑的内容是会立马生效的。</p>
-<p>另外hexo提供了很多标签插件，详情可见:<em><a href="https://hexo.io/zh-cn/docs/tag-plugins" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/tag-plugins</a></em>。<br>标签插件有很多，并且官方文档中有详实的例子，这里就简单举个图片的例子，在文档中加入下面这段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1538144411674&amp;di=f3bab7ad765c8131bf9d18e9190b02db&amp;imgtype=0&amp;src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201603%2F17%2F20160317124201_jUnuR.jpeg [赤木晴子] %&#125;</span><br></pre></td></tr></table></figure>
-<p>然后再刷新界面就能看到刚刚的那张图片了。</p>
-<img src="/2018/09/28/HEXO写作、主题及部署/imgex.png">
-<h3 id="HEXO主题"><a href="#HEXO主题" class="headerlink" title="HEXO主题"></a>HEXO主题</h3><p>hexo可以自定义主题，当然也有丰富的开源主题供我们使用，可以在<em><a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></em>去浏览并找到自己喜欢的主题。<br>下载自己喜欢的主题，然后放到<strong>themes</strong>文件夹内，然后修改站点配置中的<strong>theme</strong>配置即可。<br>例如下载好了next主题，然后再在站点配置中修改<strong>theme</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#theme: landscape</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure></p>
-<p>然后关闭HEXO服务，重新执行以下命令来启动HEXO服务。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
-<p>刷新界面，便可看到主题效果：</p>
-<img src="/2018/09/28/HEXO写作、主题及部署/themeex.png">
-<p>具体主题中的很多配置可以自行参考自己喜欢的主题的文档或是教程去自定义配置，每个主题都不尽相同。</p>
-<h3 id="HEXO部署"><a href="#HEXO部署" class="headerlink" title="HEXO部署"></a>HEXO部署</h3><h4 id="部署配置"><a href="#部署配置" class="headerlink" title="部署配置"></a>部署配置</h4><p>部署之前必须先配置好站点配置中<strong>deploy</strong>相关信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: // 类型</span><br><span class="line">  repo: // 仓库地址</span><br></pre></td></tr></table></figure></p>
-<p>部署类型主要支持：Git、Heroku、Rsync、OpenShift、FTPSync，各类型的依赖需要自己安装。</p>
-<h4 id="部署指令"><a href="#部署指令" class="headerlink" title="部署指令"></a>部署指令</h4><p>部署指令很简单：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h4 id="github访问"><a href="#github访问" class="headerlink" title="github访问"></a>github访问</h4><p>部署到github的话，程序会尝试自动检测。<br>想要通过<em>https://&lt;用户名&gt;.github.io</em>来访问自己的博客的话，需要在自己账号下新增一个名称为<strong>&lt;用户名&gt;.github.io</strong>的代码仓库，然后通过配置<strong>deploy</strong>将博客部署至该仓库下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git	// git类型</span><br><span class="line">  repo: https://github.com/&lt;用户名&gt;/&lt;用户名&gt;.github.io.git // 注意最后有个.git不能少</span><br><span class="line">  branch: master	// 必须在master分支下</span><br><span class="line">  message: [message] // 这个自定义就好，可以不配置</span><br></pre></td></tr></table></figure></p>
-<p>另外需要修改站点配置中的<strong>URL</strong>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">#url: http://yoursite.com</span><br><span class="line">url: https://github.com/&lt;用户名&gt;/&lt;用户名&gt;.github.io	// 将url修改为代码仓库地址、其他保持默认即可</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure></p>
-<p>最后执行<strong>deploy</strong>指令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>便可通过<em>https://&lt;用户名&gt;.github.io</em>来访问自己的博客啦。</p>
-
           
+本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。HEXO官网地址: https://hexo.io/
+
+HEXO写作可以通过执行new指令来创建博文。1hexo new [layout] &lt;title&gt;
+创建博文尝试执行以下命令，访问博文地
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/28/HEXO写作、主题及部署/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -695,7 +622,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hulyang's blog">
+      <meta itemprop="name" content="hulyang">
     </span>
 
     
@@ -779,324 +706,19 @@
       
         
           
-            <blockquote>
-<p>本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。<br><strong>HEXO官网地址</strong>: <em><a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a></em></p>
-</blockquote>
-<h3 id="HEXO文件目录"><a href="#HEXO文件目录" class="headerlink" title="HEXO文件目录"></a>HEXO文件目录</h3><p>上篇博文中有提到HEXO文件目录结构如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml		// 站点配置文件</span><br><span class="line">├── package.json	// 应用程序的信息</span><br><span class="line">├── scaffolds		// 模板文件夹</span><br><span class="line">├── source		// 资源文件夹</span><br><span class="line">|   ├── _drafts		// 草稿</span><br><span class="line">|   └── _posts		// 博文</span><br><span class="line">└── themes		// 主题文件夹</span><br></pre></td></tr></table></figure>
-<p>接下来对各文件及目录进行进一步介绍。</p>
-<h4 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h4><p>站点配置文件，可以在此配置大部分的参数。具体配置中各参数会在后文中的站点配置中再做介绍。</p>
-<h4 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h4><p>应用程序的信息，EJS, Stylus 和 Markdown renderer 已默认安装，可以自由移除。此部分信息不建议修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">package.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;hexo&quot;: &#123;</span><br><span class="line">    &quot;version&quot;: &quot;&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;	// 依赖信息</span><br><span class="line">    &quot;hexo&quot;: &quot;^3.0.0&quot;,</span><br><span class="line">    &quot;hexo-generator-archive&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-category&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-index&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;hexo-generator-tag&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^0.1.0&quot;,		// EJS</span><br><span class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^0.2.0&quot;,		// Stylus</span><br><span class="line">    &quot;hexo-renderer-marked&quot;: &quot;^0.2.4&quot;,		// Markdown</span><br><span class="line">    &quot;hexo-server&quot;: &quot;^0.1.2&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h4><p>模版文件夹。新建文章时，Hexo会根据scaffold来建立文件。<br>文件夹内有以下三个模板：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">draft.md	// 创建草稿的模板</span><br><span class="line">page.md		// 创建新页面的模板</span><br><span class="line">post.md		// 创建新博文的模板</span><br></pre></td></tr></table></figure></p>
-<p>创建文件时，模板中的Front-matter内容会自动填充到对应文件中。</p>
-<h4 id="source"><a href="#source" class="headerlink" title="source"></a>source</h4><p>资源文件夹，是存放用户资源的地方。<br>除_posts文件夹之外，开头命名为_ (下划线)的文件/文件夹和隐藏的文件将会被忽略。Markdown和HTML文件会被解析并放到public文件夹，而其他文件会被拷贝过去。<br>暂时查看source文件夹下只有_post文件夹，是因为HEXO初始化时自动生成了一篇hello-world.md。<br>具体如何创建新的博文、草稿、以及新的界面会在后续博文中再做介绍。</p>
-<h4 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h4><p>主题文件夹，HEXO会根据主题来生成静态文件，默认主题为landscape。</p>
-<h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>上文中已经有过介绍：_config.yml 为站点配置文件。可以在_config.yml中进行大部分的配置。</p>
-<h4 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">title</td>
-<td style="text-align:left">网站标题</td>
-</tr>
-<tr>
-<td style="text-align:left">subtitle</td>
-<td style="text-align:left">网站副标题</td>
-</tr>
-<tr>
-<td style="text-align:left">description</td>
-<td style="text-align:left">网站描述</td>
-</tr>
-<tr>
-<td style="text-align:left">keywords</td>
-<td style="text-align:left">关键词（暂时没发现有什么用处）</td>
-</tr>
-<tr>
-<td style="text-align:left">author</td>
-<td style="text-align:left">作者名称</td>
-</tr>
-<tr>
-<td style="text-align:left">language</td>
-<td style="text-align:left">网站使用的语言（一般搭配主题中的语言来设置）</td>
-</tr>
-<tr>
-<td style="text-align:left">timezone</td>
-<td style="text-align:left">网站时区。Hexo 默认使用您电脑的时区。时区列表。</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>这部分即网站的一些定制信息，需要自己根据自身需求去完善。</p>
-</blockquote>
-<h4 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-<th style="text-align:left">默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">url</td>
-<td style="text-align:left">网址网址</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">root</td>
-<td style="text-align:left">网址根目录</td>
-<td style="text-align:left">/</td>
-</tr>
-<tr>
-<td style="text-align:left">permalink</td>
-<td style="text-align:left">文章的永久链接格式</td>
-<td style="text-align:left">:year/:month/:day/:title/</td>
-</tr>
-<tr>
-<td style="text-align:left">permalink_defaults</td>
-<td style="text-align:left">永久链接中各部分的默认值</td>
-<td style="text-align:left"></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>这部分主要为网址路劲配置，主要修改URL即可。</p>
-</blockquote>
-<h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-<th style="text-align:left">默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">source_dir</td>
-<td style="text-align:left">资源文件夹，这个文件夹用来存放内容</td>
-<td style="text-align:left">source</td>
-</tr>
-<tr>
-<td style="text-align:left">public_dir</td>
-<td style="text-align:left">公共文件夹，这个文件夹用来存放生成的站点文件</td>
-<td style="text-align:left">public</td>
-</tr>
-<tr>
-<td style="text-align:left">tag_dir</td>
-<td style="text-align:left">标签文件夹</td>
-<td style="text-align:left">tags</td>
-</tr>
-<tr>
-<td style="text-align:left">archive_dir</td>
-<td style="text-align:left">归档文件夹</td>
-<td style="text-align:left">archives</td>
-</tr>
-<tr>
-<td style="text-align:left">category_dir</td>
-<td style="text-align:left">分类文件夹</td>
-<td style="text-align:left">categories</td>
-</tr>
-<tr>
-<td style="text-align:left">code_dir</td>
-<td style="text-align:left">Include code 文件夹</td>
-<td style="text-align:left">downloads/code</td>
-</tr>
-<tr>
-<td style="text-align:left">i18n_dir</td>
-<td style="text-align:left">国际化（i18n）文件夹</td>
-<td style="text-align:left">:lang</td>
-</tr>
-<tr>
-<td style="text-align:left">skip_render</td>
-<td style="text-align:left">跳过指定文件的渲染您可使用<em>glob表达式</em>来匹配路径。</td>
-<td style="text-align:left"></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>这部分为HEXO自动生成文件后的目录情况，基本不需要做任何修改，保持默认值即可。</p>
-</blockquote>
-<h4 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-<th style="text-align:left">默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">new_post_name</td>
-<td style="text-align:left">新文章的文件名称</td>
-<td style="text-align:left">:title.md</td>
-</tr>
-<tr>
-<td style="text-align:left">default_layout</td>
-<td style="text-align:left">预设布局</td>
-<td style="text-align:left">post</td>
-</tr>
-<tr>
-<td style="text-align:left">auto_spacing</td>
-<td style="text-align:left">在中文和英文之间加入空格</td>
-<td style="text-align:left">false</td>
-</tr>
-<tr>
-<td style="text-align:left">titlecase</td>
-<td style="text-align:left">把标题转换为title case</td>
-<td style="text-align:left">false</td>
-</tr>
-<tr>
-<td style="text-align:left">external_link</td>
-<td style="text-align:left">在新标签中打开链接</td>
-<td style="text-align:left">true</td>
-</tr>
-<tr>
-<td style="text-align:left">filename_case</td>
-<td style="text-align:left">把文件名称转换为(1)小写或(2)大写</td>
-<td style="text-align:left">0</td>
-</tr>
-<tr>
-<td style="text-align:left">render_drafts</td>
-<td style="text-align:left">显示草稿</td>
-<td style="text-align:left">false</td>
-</tr>
-<tr>
-<td style="text-align:left">post_asset_folder</td>
-<td style="text-align:left">启动Asset文件夹</td>
-<td style="text-align:left">false</td>
-</tr>
-<tr>
-<td style="text-align:left">relative_link</td>
-<td style="text-align:left">把链接改为与根目录的相对位址</td>
-<td style="text-align:left">false</td>
-</tr>
-<tr>
-<td style="text-align:left">future</td>
-<td style="text-align:left">显示未来的文章</td>
-<td style="text-align:left">true</td>
-</tr>
-<tr>
-<td style="text-align:left">highlight</td>
-<td style="text-align:left">代码块的设置</td>
-<td style="text-align:left"></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>这部分主要对博文中的部分信息进行配置，基本不需要做任何修改，保持默认即可。</p>
-</blockquote>
-<h4 id="分类-amp-标签"><a href="#分类-amp-标签" class="headerlink" title="分类 &amp; 标签"></a>分类 &amp; 标签</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-<th style="text-align:left">默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">default_category</td>
-<td style="text-align:left">默认分类</td>
-<td style="text-align:left">uncategorized</td>
-</tr>
-<tr>
-<td style="text-align:left">category_map</td>
-<td style="text-align:left">分类别名</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">tag_map</td>
-<td style="text-align:left">标签别名</td>
-<td style="text-align:left"></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>category_map以及tag_map配置为名称-路径的这种K-V形式，以category_map最为示例：<br>category_map:<br>&nbsp;&nbsp;&nbsp;&nbsp;分类1:category1<br>&nbsp;&nbsp;&nbsp;&nbsp;分类2:category2</p>
-</blockquote>
-<h4 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期 / 时间格式"></a>日期 / 时间格式</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-<th style="text-align:left">默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">date_format</td>
-<td style="text-align:left">日期格式</td>
-<td style="text-align:left">YYYY-MM-DD</td>
-</tr>
-<tr>
-<td style="text-align:left">time_format</td>
-<td style="text-align:left">时间格式</td>
-<td style="text-align:left">H:mm:ss</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>Hexo使用Moment.js来解析和显示时间。这部分基本上不需要修改，保持默认即可。</p>
-</blockquote>
-<h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-<th style="text-align:left">默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">per_page</td>
-<td style="text-align:left">每页显示的文章量(0 = 关闭分页功能)</td>
-<td style="text-align:left">10</td>
-</tr>
-<tr>
-<td style="text-align:left">pagination_dir</td>
-<td style="text-align:left">分页目录</td>
-<td style="text-align:left">page</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>这部分很好理解，根据个人喜好进行配置就好。</p>
-</blockquote>
-<h4 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h4><table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">theme</td>
-<td style="text-align:left">当前主题名称。值为false时禁用主题</td>
-</tr>
-<tr>
-<td style="text-align:left">deploy</td>
-<td style="text-align:left">部署部分的设置</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>主题和部署会在后续博文中再做介绍。</p>
-</blockquote>
-<h3 id="自定义博客"><a href="#自定义博客" class="headerlink" title="自定义博客"></a>自定义博客</h3><p>已经大致了解过站点的相关配置，接下来简单修改下配置，看看效果。</p>
-<h4 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h4><p>简单修改_config.yml中的关于网站部分的配置，修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: hulyang</span><br><span class="line">subtitle: hulyang&apos;s blog</span><br><span class="line">description: hulyang blog desc </span><br><span class="line">keywords:</span><br><span class="line">author: hulyang</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure></p>
-<h4 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h4><p>配置修改并保存成功以后，执行以下指令，启动服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean	// 清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span><br><span class="line">hexo generate	// 自动生成静态文件</span><br><span class="line">hexo server	//启动服务</span><br></pre></td></tr></table></figure></p>
-<p>统一访问<em><a href="http://127.0.0.1:4000" target="_blank" rel="noopener">http://127.0.0.1:4000</a></em>来看看效果如何：<br><img src="/2018/09/15/HEXO各文件作用及主要配置/example.jpg"></p>
-<blockquote>
-<p>配置生效，标题等与刚刚的配置相符</p>
-</blockquote>
-
           
+本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。HEXO官网地址: https://hexo.io/
+
+HEXO文件目录上篇博文中有提到HEXO文件目录结构如下：
+12345678.├── _config.yml		// 站点配置文件├── packa
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/15/HEXO各文件作用及主要配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1152,7 +774,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hulyang's blog">
+      <meta itemprop="name" content="hulyang">
     </span>
 
     
@@ -1236,30 +858,20 @@
       
         
           
-            <blockquote>
-<p>本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。<br><strong>HEXO官网地址</strong>: <em><a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a></em></p>
-</blockquote>
-<h3 id="HEXO的安装"><a href="#HEXO的安装" class="headerlink" title="HEXO的安装"></a>HEXO的安装</h3><h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><p>安装HEXO前，必须确保安装机器上已经安装Git以及Node.js。如未安装，以下是对应的官网地址：</p>
-<ul>
-<li><strong>Git</strong>: <em><a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></em></li>
-<li><strong>Node.js</strong>: <em><a href="https://nodejs.org/" target="_blank" rel="noopener">https://nodejs.org/</a></em></li>
-</ul>
-<h4 id="安装HEXO"><a href="#安装HEXO" class="headerlink" title="安装HEXO"></a>安装HEXO</h4><p>安装环境准备完毕后就可以直接通过npm来安装HEXO了：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><h4 id="初始化建站目录"><a href="#初始化建站目录" class="headerlink" title="初始化建站目录"></a>初始化建站目录</h4><p>HEXO安装完毕后，确定好建站目录，执行以下指令，自动初始化建站目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>执行完毕后，建站目录会自定生成HEXO的目录结构，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml		// 站点配置文件</span><br><span class="line">├── package.json	// 应用程序的信息</span><br><span class="line">├── scaffolds		// 模板文件夹</span><br><span class="line">├── source		// 资源文件夹</span><br><span class="line">|   ├── _drafts		// 草稿</span><br><span class="line">|   └── _posts		// 博文</span><br><span class="line">└── themes		// 主题文件夹</span><br></pre></td></tr></table></figure>
-<p>在这通过注释的方式对各文件|文件夹进行了简单介绍，后续博文中会做进一步介绍。</p>
-<h4 id="自动生成静态文件"><a href="#自动生成静态文件" class="headerlink" title="自动生成静态文件"></a>自动生成静态文件</h4><p>建站目录初始化完成以后，再执行<strong>generate</strong>指令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<p>自动生成博客所需的静态文件（HTML、JS、CSS等）</p>
-<h4 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h4><p>静态文件生成以后，最后执行<strong>server</strong>指令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>即可启动服务，通过<a href="http://127.0.0.1:4000/" target="_blank" rel="noopener">http://127.0.0.1:4000/</a>即可访问自己的博客，访问的效果图如下：</p>
-<img src="/2018/09/14/HEXO搭建博客初体验/server-example.jpg">
-
           
+本文主要参考HEXO官方文档进行撰写，记录自己的建站过程，以供自己或他人在建站的作为简单参考。HEXO官网地址: https://hexo.io/
+
+HEXO的安装环境准备安装HEXO前，必须确保安装机器上已经安装Git以及Node.js。如未安装，以下是对应的官网地址：
+
+Git: https:
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/14/HEXO搭建博客初体验/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
