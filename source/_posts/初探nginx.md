@@ -45,7 +45,7 @@ Nginx需要依赖以下三个类库：
 
 
 Nginx的整个下载安装过程十分的简单、常规。
-Nginx的安装包下载很简单，找到下载地址，直接_wget_下来就好：
+Nginx的安装包下载很简单，去[Nginx官网](http://nginx.org/)找到下载地址，直接_wget_下来就好：
 
 ```
 wget http://nginx.org/download/nginx-1.12.2.tar.gz

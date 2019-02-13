@@ -1,5 +1,5 @@
 ---
-title: about
+title: 个人简历
 date: 2018-09-30 14:26:13
 type:
 ---
@@ -10,82 +10,15 @@ table {
 }
 </style>
 
-# 个人简历
-
 ## 基本信息
 
-<table>
-    <tr>
-        <td>
-            姓名
-        </td>
-        <td>
-            杨沪亮
-        </td>
-        <td>
-            性别
-        </td>
-        <td>
-            男
-        </td>
-    </tr>
-    <tr>
-        <td>
-            出生年月
-        </td>
-        <td>
-            1993.08
-        </td>
-        <td>
-            居住地
-        </td>
-        <td>
-            南京
-        </td>
-    </tr>
-    <tr>
-        <td>
-            手机
-        </td>
-        <td>
-            18661209825
-        </td>
-        <td>
-            邮箱
-        </td>
-        <td>
-            hlyang0805@gmail.com
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Github
-        </td>
-        <td>
-            https://github.com/hulyang
-        </td>
-        <td>
-            就职情况
-        </td>
-        <td>
-            在职/考虑机会
-        </td>
-    </tr>
-    <tr>
-        <td>
-            毕业院校
-        </td>
-        <td>
-            南京邮电大学
-        </td>
-        <td>
-            学历
-        </td>
-        <td>
-            本科
-        </td>
-    </tr>
-</table>
+|||||
+|-----:|:-----|-----:|:-----|
+|姓名|杨沪亮|性别|男|
+|出生年月|1993.08|居住地|南京|
+|手机|18661209825|邮箱|hlyang0805@gmail.com|
+|Github|https://github.com/hulyang|就职情况|在职/考虑机会|
+|毕业院校|南京邮电大学|学历|本科|
 
 ## 求职意向
 
